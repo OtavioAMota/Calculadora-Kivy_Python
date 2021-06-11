@@ -1,0 +1,104 @@
+#:kivy 1.0
+<inclement>:
+    orientation:'vertical'
+    id: Calculadora
+    display: texto
+    rows: 5
+    padding: 5
+    spacing: 5
+    TextInput:
+        id: texto
+        font_size: 30
+        multiline: False
+    BoxLayout:
+        id:box79
+        orientation:'horizontal'
+        Button:
+            id:botao7
+            text:'7'
+            font_size:30
+            on_release: texto.text = texto.text + botao7.text
+        Button:
+            id:botao8
+            text:'8'
+            font_size:30
+            on_release: texto.text = texto.text + botao8.text
+        Button:
+            id:botao9
+            text:'9'
+            font_size:30
+            on_release: texto.text = texto.text + botao9.text
+        Button:
+            id:botaovez
+            text:'*'
+            font_size:30
+            on_release: texto.text = texto.text + botaovez.text
+    BoxLayout:
+        id:box46
+        orientation:'horizontal'
+        Button:
+            id:botao6
+            text:'6'
+            font_size:30
+            on_release: texto.text = texto.text + botao6.text
+        Button:
+            id:botao5
+            text:'5'
+            font_size:30
+            on_release: texto.text = texto.text + botao5.text
+        Button:
+            id:botao4
+            text:'4'
+            font_size:30
+            on_release: texto.text = texto.text + botao4.text
+        Button:
+            id:botaodiv
+            text:'/'
+            font_size:30
+            on_release: texto.text = texto.text + botaodiv.text
+    BoxLayout:
+        id:box13
+        orientation:'horizontal'
+        Button:
+            id:botao3
+            text:'3'
+            font_size:30
+            on_release: texto.text = texto.text + botao3.text
+        Button:
+            id:botao2
+            text:'2'
+            font_size:30
+            on_release: texto.text = texto.text + botao2.text
+        Button:
+            id:botao1
+            text:'1'
+            font_size:30
+            on_release: texto.text = texto.text + botao1.text
+        Button:
+            id:botaomais
+            text:'+'
+            font_size:30
+            on_release: texto.text = texto.text + botaomais.text
+    BoxLayout:
+        id:box0ig
+        orientation:'horizontal'
+        Button:
+            id:botao0
+            text:'0'
+            font_size:30
+            on_release: texto.text = texto.text + botao0.text
+        Button:
+            id:botaopont
+            text:'.'
+            font_size:30
+            on_release: texto.text = texto.text + botaopont.text
+        Button:
+            id:botaomenos
+            text:'-'
+            font_size:30
+            on_release: texto.text = texto.text + botaomenos.text
+        Button:
+            id:botaoigual
+            text:'='
+            font_size:30
+            on_press: Calculadora.calcular(texto.text)
